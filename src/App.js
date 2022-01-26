@@ -10,26 +10,27 @@ export default function App() {
     <div className="App">
       <div className="container">
         <WeatherSearch />
+
+        <footer>
+          This app was built by{" "}
+          <a
+            href="https://trusting-curie-946ae6.netlify.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Genevieve Leanne Dominguez
+          </a>
+          . It is open-sourced on{" "}
+          <a
+            href="https://github.com/genevieveleanne/react-weather-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          .
+        </footer>
       </div>
-      <footer>
-        This app was built by{" "}
-        <a
-          href="https://trusting-curie-946ae6.netlify.app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Genevieve Leanne Dominguez
-        </a>
-        . It is open-sourced on{" "}
-        <a
-          href="https://github.com/genevieveleanne/react-weather-app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub
-        </a>
-        .
-      </footer>
     </div>
   );
 }

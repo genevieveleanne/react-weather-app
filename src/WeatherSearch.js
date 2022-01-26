@@ -24,26 +24,28 @@ export default function WeatherSearch() {
         </div>
       </form>
 
-      <div className="CityDateDescription text-center">
+      <div className="text-center">
         <h1>Las Vegas</h1>
-        <ul>
+        <ul className="dateAndDescription">
           <li>Tuesday 5:00</li>
           <li>Sunny</li>
         </ul>
       </div>
 
-      <div className="row">
+      <div className="row mt-4">
         <div className="col-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="Weather icon"
-          />
-          75°F
+          <span className="temperature">75</span>
+          <span className="units">°F</span>
         </div>
-        <div className="col-6">
-          <ul>
-            <li>Humidity: 7%</li>
-            <li>Wind: 5 mph</li>
+
+        <div className="col-6 mt-3">
+          <ul className="text-center additionalWeather">
+            <li>
+              <em>Humidity:</em> 7%
+            </li>
+            <li>
+              <em>Wind:</em> 5 mph
+            </li>
           </ul>
         </div>
       </div>

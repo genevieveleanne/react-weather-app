@@ -18,15 +18,24 @@
   padding: 0;
 }
 
+.WeatherSearch img {
+  display: inline-block;
+  height: 35%;
+  width: 35%;
+  margin-left: 20px;
+}
+
 .WeatherSearch .temperature {
   font-weight: 400;
   font-size: 48px;
-  margin-left: 50px;
+  margin-left: 5px;
+  position: relative;
+  top: 5px;
 }
 
 .WeatherSearch .units {
   position: relative;
-  top: -20px;
+  top: -15px;
 }
 
 .dateAndDescription {
@@ -41,6 +50,7 @@
 
 .WeatherSearch h1,
 .WeatherSearch .temperature,
+.WeatherSearch .units,
 .additionalWeather,
 .dateAndDescription {
   opacity: 0.8;

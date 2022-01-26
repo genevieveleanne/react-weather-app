@@ -25,7 +25,6 @@
 }
 
 .WeatherSearch .units {
-  font-size: 17px;
   position: relative;
   top: -20px;
 }
@@ -35,8 +34,9 @@
   font-size: 20px;
 }
 
+.WeatherSearch .units,
 .additionalWeather {
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .WeatherSearch h1,

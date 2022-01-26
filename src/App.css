@@ -1,0 +1,20 @@
+.container {
+  max-width: 600px;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  display: block;
+  margin: 5px auto;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+body {
+  background-color: #20232a;
+}
+
+footer {
+  color: white;
+  font-size: 12px;
+  margin-left: 475px;
+}

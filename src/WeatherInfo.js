@@ -41,6 +41,15 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
       </div>
+
+      <div className="row">
+        <div className="col-6">
+          <ul>
+            <li>High: {Math.round(props.data.high)}°</li>
+            <li>Low: {Math.round(props.data.low)}°</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

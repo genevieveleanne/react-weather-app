@@ -9,6 +9,8 @@ export default function WeatherSearch(props) {
   const [city, setCity] = useState(props.cityOnLoad);
 
   function displayResponse(response) {
+    console.log(response.data);
+
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -17,6 +19,8 @@ export default function WeatherSearch(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       city: response.data.name,
+      high: response.data.main.temp_max,
+      low: response.data.main.temp_min,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
     });
   }

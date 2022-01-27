@@ -2,8 +2,6 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedSunrise from "./FormattedSunrise";
 
-import "./WeatherInfo.css";
-
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
@@ -46,14 +44,18 @@ export default function WeatherInfo(props) {
       </div>
 
       <div className="row">
-        <div className="col-6">
+        <div className="col-6 text-center mt-3 additionalWeather">
           <ul>
-            <li>High: {Math.round(props.data.high)}°</li>
-            <li>Low: {Math.round(props.data.low)}°</li>
+            <li>
+              <em>High:</em> {Math.round(props.data.high)}°
+            </li>
+            <li>
+              <em>Low:</em> {Math.round(props.data.low)}°
+            </li>
           </ul>
         </div>
 
-        <div className="col-6">
+        <div className="col-6 text-center mt-3 additionalWeather">
           <FormattedSunrise
             currentSunrise={props.data.sunrise}
             currentSunset={props.data.sunset}

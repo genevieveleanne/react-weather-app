@@ -6,6 +6,7 @@ import "./WeatherSearch.css";
 
 export default function WeatherSearch(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.cityOnLoad);
 
   function displayResponse(response) {
     setWeatherData({
@@ -15,14 +16,30 @@ export default function WeatherSearch(props) {
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
+      city: response.data.name,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
     });
+  }
+
+  function search() {
+    const apiKey = "1d92aebec33d3d8890c4cc40ed26f1eb";
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(displayResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityInput(event) {
+    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
     return (
       <div className="WeatherSearch">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
@@ -30,6 +47,7 @@ export default function WeatherSearch(props) {
                 placeholder="Enter a City..."
                 autoFocus="true"
                 className="form-control"
+                onChange={handleCityInput}
               />
             </div>
             <div className="col-3">
@@ -42,13 +60,11 @@ export default function WeatherSearch(props) {
           </div>
         </form>
 
-        <WeatherInfo data={weatherData}/>
+        <WeatherInfo data={weatherData} />
+      </div>
     );
   } else {
-    const apiKey = "1d92aebec33d3d8890c4cc40ed26f1eb";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.cityOnLoad}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(displayResponse);
-
+    search();
     return null;
   }
 }

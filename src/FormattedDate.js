@@ -12,7 +12,7 @@ export default function FormattedDate(props) {
   ];
 
   let day = days[props.currentDate.getDay()];
-  let hours = props.currentDate.getHour();
+  let hours = props.currentDate.getHours();
   let minutes = props.currentDate.getMinutes();
 
   if (minutes < 10) {
@@ -21,7 +21,7 @@ export default function FormattedDate(props) {
 
   return (
     <div className="FormattedDate">
-      {day} {hours};{minutes}
+      {day} {hours}:{minutes}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 
 import "./WeatherSearch.css";
@@ -42,44 +42,7 @@ export default function WeatherSearch(props) {
           </div>
         </form>
 
-        <div className="text-center">
-          <h1>{props.cityOnLoad}</h1>
-          <ul className="dateAndDescription">
-            <li>
-              <FormattedDate currentDate={weatherData.date} />
-            </li>
-            <li className="text-capitalize">{weatherData.description}</li>
-          </ul>
-        </div>
-
-        <div className="row mt-4">
-          <div className="col-6">
-            <div className="clearfix">
-              <img
-                src={weatherData.iconUrl}
-                alt={weatherData.description}
-                className="float-left"
-              />
-
-              <span className="temperature">
-                {Math.round(weatherData.temperature)}
-              </span>
-              <span className="units">°F</span>
-            </div>
-          </div>
-
-          <div className="col-6 mt-3">
-            <ul className="text-center additionalWeather">
-              <li>
-                <em>Humidity:</em> {weatherData.humidity}%
-              </li>
-              <li>
-                <em>Wind:</em> {weatherData.wind} mph
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        <WeatherInfo data={weatherData}/>
     );
   } else {
     const apiKey = "1d92aebec33d3d8890c4cc40ed26f1eb";

@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 import FormattedSunrise from "./FormattedSunrise";
 
 export default function WeatherInfo(props) {
@@ -18,11 +19,7 @@ export default function WeatherInfo(props) {
       <div className="row mt-4">
         <div className="col-6">
           <div className="clearfix">
-            <img
-              src={props.data.icon}
-              alt={props.data.description}
-              className="float-left"
-            />
+            <WeatherIcon iconData={props.data.icon} />
 
             <span className="temperature">
               {Math.round(props.data.temperature)}
@@ -47,8 +44,8 @@ export default function WeatherInfo(props) {
         </div>
       </div>
 
-      <div className="row">
-        <div className="col-6 text-center mt-3 additionalWeather">
+      <div className="row mt-4">
+        <div className="col-6 text-center additionalWeather">
           <ul>
             <li>
               <em>High:</em>{" "}
@@ -63,7 +60,7 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
 
-        <div className="col-6 text-center mt-3 additionalWeather">
+        <div className="col-6 text-center additionalWeather">
           <FormattedSunrise
             currentSunrise={props.data.sunrise}
             currentSunset={props.data.sunset}

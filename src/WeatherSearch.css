@@ -18,17 +18,18 @@
   padding: 0;
 }
 
-.WeatherSearch img {
+.WeatherSearch canvas {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 40px;
+  margin-right: 5px;
+  position: relative;
+  top: 5px;
 }
 
 .WeatherSearch .temperature {
   font-weight: 400;
   font-size: 48px;
   margin-left: 5px;
-  position: relative;
-  top: 5px;
 }
 
 .WeatherSearch .units {

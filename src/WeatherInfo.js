@@ -19,7 +19,7 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div className="clearfix">
             <img
-              src={props.data.iconUrl}
+              src={props.data.icon}
               alt={props.data.description}
               className="float-left"
             />
@@ -34,10 +34,14 @@ export default function WeatherInfo(props) {
         <div className="col-6 mt-3">
           <ul className="text-center additionalWeather">
             <li>
-              <em>Humidity:</em> {props.data.humidity}%
+              <em>Humidity:</em>{" "}
+              <span className="weatherInfo">{props.data.humidity}%</span>
             </li>
             <li>
-              <em>Wind:</em> {Math.round(props.data.wind)} mph
+              <em>Wind:</em>{" "}
+              <span className="weatherInfo">
+                {Math.round(props.data.wind)} mph
+              </span>
             </li>
           </ul>
         </div>
@@ -47,10 +51,14 @@ export default function WeatherInfo(props) {
         <div className="col-6 text-center mt-3 additionalWeather">
           <ul>
             <li>
-              <em>High:</em> {Math.round(props.data.high)}°
+              <em>High:</em>{" "}
+              <span className="weatherInfo">
+                {Math.round(props.data.high)}°
+              </span>
             </li>
             <li>
-              <em>Low:</em> {Math.round(props.data.low)}°
+              <em>Low:</em>{" "}
+              <span className="weatherInfo">{Math.round(props.data.low)}°</span>
             </li>
           </ul>
         </div>

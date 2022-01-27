@@ -19,10 +19,16 @@ export default function FormattedSunrise(props) {
     <div className="FormattedSunrise">
       <ul>
         <li>
-          <em>Sunrise:</em> {sunriseHours}:{sunriseMinutes}
+          <em>Sunrise:</em>{" "}
+          <span className="weatherInfo">
+            {sunriseHours}:{sunriseMinutes}
+          </span>
         </li>
         <li>
-          <em>Sunset:</em> {sunsetHours}:{sunsetMinutes}
+          <em>Sunset:</em>{" "}
+          <span className="weatherInfo">
+            {sunsetHours}:{sunsetMinutes}
+          </span>
         </li>
       </ul>
     </div>

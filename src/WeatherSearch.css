@@ -20,8 +20,6 @@
 
 .WeatherSearch img {
   display: inline-block;
-  height: 35%;
-  width: 35%;
   margin-left: 20px;
 }
 
@@ -46,6 +44,12 @@
 .WeatherSearch .units,
 .additionalWeather {
   font-size: 19px;
+}
+
+.WeatherSearch .temperature,
+.WeatherSearch .units,
+.WeatherSearch .weatherInfo {
+  color: #191970;
 }
 
 .WeatherSearch h1,

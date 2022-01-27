@@ -21,6 +21,8 @@ export default function WeatherSearch(props) {
       city: response.data.name,
       high: response.data.main.temp_max,
       low: response.data.main.temp_min,
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
     });
   }

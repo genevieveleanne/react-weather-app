@@ -34,7 +34,8 @@
 
 .WeatherSearch .units {
   position: relative;
-  top: -15px;
+  top: -20px;
+  margin-left: 3px;
 }
 
 .dateAndDescription {

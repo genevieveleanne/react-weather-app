@@ -9,7 +9,9 @@ export default function WeatherForecast() {
       <div className="row">
         <div className="col">
           <div className="ForecastDay">Sun</div>
-          <WeatherIcon iconData={"01d"} />
+          <div className="ForecastIcon">
+            <WeatherIcon iconData={"01d"} size={36} />
+          </div>
           <div className="ForecastTemp">
             62° <span className="MinTemp">39°</span>
           </div>

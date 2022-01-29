@@ -3,6 +3,11 @@
   margin-top: 25px;
 }
 
+.WeatherForecast .ForecastIcon {
+  margin: 7px;
+  margin-left: -32px;
+}
+
 .WeatherForecast .ForecastTemp {
   color: #191970;
 }

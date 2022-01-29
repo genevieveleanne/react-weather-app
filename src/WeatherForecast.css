@@ -1,0 +1,18 @@
+.WeatherForecast {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.WeatherForecast .ForecastTemp {
+  color: #191970;
+}
+
+.WeatherForecast .ForecastDay,
+.WeatherForecast .ForecastTemp {
+  font-size: 18px;
+}
+
+.WeatherForecast .ForecastDay,
+.WeatherForecast .MinTemp {
+  opacity: 0.8;
+}

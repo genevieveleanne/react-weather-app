@@ -2,6 +2,8 @@ import React from "react";
 
 export default function FormattedSunrise(props) {
   let sunriseHours = props.currentSunrise.getHours();
+  sunriseHours = sunriseHours % 12 || 12;
+
   let sunriseMinutes = props.currentSunrise.getMinutes();
 
   if (sunriseMinutes < 10) {
@@ -9,6 +11,8 @@ export default function FormattedSunrise(props) {
   }
 
   let sunsetHours = props.currentSunset.getHours();
+  sunsetHours = sunsetHours % 12 || 12;
+
   let sunsetMinutes = props.currentSunset.getMinutes();
 
   if (sunsetMinutes < 10) {

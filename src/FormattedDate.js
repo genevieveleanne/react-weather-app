@@ -12,7 +12,14 @@ export default function FormattedDate(props) {
   ];
 
   let day = days[props.currentDate.getDay()];
+
   let hours = props.currentDate.getHours();
+  hours = hours % 12 || 12;
+
+  /* if (hours === 0) {
+    hours = 12; 
+  } */
+
   let minutes = props.currentDate.getMinutes();
 
   if (minutes < 10) {

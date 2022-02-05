@@ -25,13 +25,13 @@ export default function FormattedSunrise(props) {
         <li>
           <em>Sunrise:</em>{" "}
           <span className="weatherInfo">
-            {sunriseHours}:{sunriseMinutes}
+            {sunriseHours}:{sunriseMinutes} AM
           </span>
         </li>
         <li>
           <em>Sunset:</em>{" "}
           <span className="weatherInfo">
-            {sunsetHours}:{sunsetMinutes}
+            {sunsetHours}:{sunsetMinutes} PM
           </span>
         </li>
       </ul>

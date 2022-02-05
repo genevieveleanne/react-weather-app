@@ -26,18 +26,9 @@ export default function FormattedDate(props) {
     minutes = `0${minutes}`;
   }
 
-  if (hours === 0 || hours < 12) {
-    return (
-      <div className="FormattedDate">
-        {day} {hours}:{minutes} AM
-      </div>
-    );
-  }
-  if (hours >= 12) {
-    return (
-      <div className="FormattedDate">
-        {day} {hours}:{minutes} PM
-      </div>
-    );
-  }
+  return (
+    <div className="FormattedDate">
+      {day} {hours}:{minutes}
+    </div>
+  );
 }

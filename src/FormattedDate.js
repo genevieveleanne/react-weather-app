@@ -26,11 +26,9 @@ export default function FormattedDate(props) {
     minutes = `0${minutes}`;
   }
 
-  let amOrPM = hours >= 12 ? "PM" : "AM";
-
   return (
     <div className="FormattedDate">
-      {day} {hours}:{minutes} {amOrPM}
+      {day} {hours}:{minutes}
     </div>
   );
 }

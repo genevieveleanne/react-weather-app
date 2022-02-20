@@ -61,3 +61,13 @@
 .dateAndDescription {
   opacity: 0.8;
 }
+
+@media (max-width: 420px) {
+  .WeatherSearch .form-control {
+    width: 100%;
+  }
+
+  .WeatherSearch canvas {
+    margin-left: -6px;
+  }
+}

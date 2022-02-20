@@ -21,3 +21,13 @@
 .WeatherForecast .MinTemp {
   opacity: 0.8;
 }
+
+@media (max-width: 420px) {
+  .WeatherForecast .ForecastIcon {
+    margin-left: 18px;
+  }
+
+  .WeatherForecast .col {
+    margin-top: 23px;
+  }
+}
